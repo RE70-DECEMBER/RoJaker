@@ -12,22 +12,22 @@ os.system("figlet -f slant RoJaker")
 print('------------------------')
 print('Made By James Ryan Wood')
 print('------------------------')
-Roku.discover(timeout=10)
+roku.discover(timeout=10)
 ip = input("Enter IP: ")
 print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\5.Run A App\n6.Exit")
 menu = input("Menu> ")
 
 
 if menu == "1":
-    roku = Roku(ip)
-    roku.info
+    a = roku(ip)
+    a.info
 
 elif menu == "2":
-    roku = Roku(ip)
-    roku.active_app
+    a = roku(ip)
+    a.active_app
 elif menu == "3":
-    roku = Roku(ip)
-    app = roku.apps[0]
+    a = roku(ip)
+    app = a.apps[0]
     print(app.id, app.name, app.version)
 elif menu == "4":
     print("Work in progress")
