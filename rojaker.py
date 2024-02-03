@@ -2,7 +2,7 @@
 
 #Imports 
 import os
-import roku
+from roku import Roku
 import time 
 
 
@@ -19,14 +19,14 @@ menu = input("Menu> ")
 
 
 if menu == "1":
-    a = roku(ip)
-    a.info
+    roku = Roku(ip)
+    roku.info
 
 elif menu == "2":
-    a = roku(ip)
+    roku = Roku(ip)
     a.active_app
 elif menu == "3":
-    a = roku(ip)
+    Roku = Roku(ip)
     app = a.apps[0]
     print(app.id, app.name, app.version)
 elif menu == "4":
