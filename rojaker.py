@@ -9,7 +9,7 @@ import sys
 os.system("clear")
 print("scanning...")
 
-roku_devices = Roku.discover()
+roku_devices = Roku.discover(timeout=10)
 print("M. Manual Input IP")
 for i, device in enumerate(roku_devices):
     print(f"{i+1}. {device}")
@@ -64,8 +64,9 @@ while True:
         print(roku.active_app)
         input("Press enter to return to menu")
     elif menu == "3":
-        app = roku.apps[0]
-        print(app.id, app.name, app.version)
+        roku = Roku(selected_device)
+        print(roku.apps)
+        input("Press enter to return to menu")
     elif menu == "4":
         remote_menu()
     elif menu == "6":
