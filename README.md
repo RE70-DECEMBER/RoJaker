@@ -10,7 +10,7 @@ I will constantly update this script it's a work in progress and it works so far
 
  **FEBRUARY 11TH, 2024**
 * Auto-pip-module-checker(added)
-* Menu Border (fixed) 
+* Menu Border(fixed) 
 
   **FEBRUARY 3RD, 2024**
 * Scan for roku tvs (added)
