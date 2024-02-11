@@ -1,8 +1,39 @@
 # Made By James Ryan Wood
 
-# Imports
+# import module checker
+import importlib.util
+
+roku_installed = importlib.util.find_spec("roku") is not None
+colorama_installed = importlib.util.find_spec("colorama") is not None
+
+if not roku_installed or not colorama_installed:
+    print("[ERROR] requirements not installed")
+    request = input("Install them? Y or N > ")
+    print()
+    if request.upper() == "Y":
+        if not roku_installed:
+            try:
+                import pip
+                pip.main(["install", "roku"])
+                print("[SUCCESS] roku installed!")
+            except ImportError:
+                print("[ERROR] pip is not installed. Please install it manually.")
+        if not colorama_installed:
+            try:
+                import pip
+                pip.main(["install", "colorama"])
+                print("[SUCCESS] colorama installed!")
+            except ImportError:
+                print("[ERROR] pip is not installed. Please install it manually.")
+    else:
+        print("[EXITING] Requirements not installed...")
+        exit()
+
+# imports
 import os
 from roku import Roku
+import colorama
+from colorama import Fore, Back, Style
 import sys
 
 # IP Input
@@ -15,16 +46,15 @@ for i, device in enumerate(roku_devices):
     print(f"{i+1}. {device}")
 selected_index = input("Select A Option:  ")
 
-if selected_index.lower() == "m":  # Convert selected_index to lowercase before comparison
+if selected_index.lower() == "m":  
     selected_device = input("Enter IP address: ")
 else:
     selected_index = int(selected_index) - 1
-
     if selected_index < 0 or selected_index >= len(roku_devices):
         print("Invalid selection")
         exit()
     else:
-        selected_device = roku_devices[selected_index].host  # Get only the IP address without the port
+        selected_device = roku_devices[selected_index].host  
 
 # Menu
 def main():
@@ -33,7 +63,7 @@ def main():
     print('------------------------')
     print('Made By James Ryan Wood')
     print("IP Selected: " + selected_device)
-    print('------------------------')
+    print('----------')
     print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Exit")
     menu = input("Menu> ")
     return menu
@@ -42,23 +72,34 @@ def remote_menu():
     os.system("clear")
     os.system("figlet -f slant RoJaker")
     print('------------------------')
-    print('Made By James Ryan Wood')
+    print(Fore.GREEN + 'Made By James Ryan Wood')
     print("IP Selected: " + selected_device)
     print('------------------------')
-    print("1. Up\n2. Down\n3. Right\n4. Left\n5. Select\n6. Back\n7. Replay\n8. Return to RoJaker")
+    print("1. Up\n2. Down\n3. Right\n4. Left\n5. Select\n6. Back\n7. Replay\n8.Home menu\n9. Return to RoJaker")
     rem = input("Remote> ")
-    if rem == "1":
-        roku = Roku(selected_device)
-        se = input("Enter something: ")
-        roku.literal(se)
-        remote_menu()  # Call remote_menu() again to return to the remote menu
+    
+    while True:
+        if rem == "1":
+        	roku = Roku(selected_device)
+        	se = input("Enter something: ")
+        	roku.literal(se)
+        	remote_menu() 
+        	
+        elif rem == "8":
+        	roku = Roku(selected_device)
+        	roku.home()
+        	remote_menu()
+        elif rem == "9":
+        	main()
 
 while True:
     menu = main()
     if menu == "1":
         roku = Roku(selected_device)
-        print(roku.info)
+        colorama.init()
+        print(Fore.GREEN + roku.info)
         input("Press enter to return to menu")
+        print(Fore.White)
     elif menu == "2":
         roku = Roku(selected_device)
         print(roku.active_app)
@@ -70,4 +111,5 @@ while True:
     elif menu == "4":
         remote_menu()
     elif menu == "6":
+        exit()
         break
