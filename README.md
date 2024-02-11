@@ -21,16 +21,12 @@ I will constantly update this script it's a work in progress and it works so far
 
 --requirments--
 
-python3
-pip3
-
---set up command--
-
-pip3 install -r requirements.txt
+*python3
+*pip3
 
 --how to use--
 
 python3 rojaker.py
 
-
-#other requirements will install from the set u>
+--Note
+*you will be prompted to install the requirments you need when you start the script, I made it where if you don't have the requirments it'll install them for you when you run the rojaker.py script, so you won't have a requirments.txt anymore because that's inconvenient to a unexpericed user using the command-line, so basically no need to do (pip3 install -r requirements.txt) on this script, requirments.txt ain't there anyways 
