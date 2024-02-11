@@ -28,5 +28,6 @@ I will constantly update this script it's a work in progress and it works so far
 
 python3 rojaker.py
 
---Note
-*you will be prompted to install the requirments you need when you start the script, I made it where if you don't have the requirments it'll install them for you when you run the rojaker.py script, so you won't have a requirments.txt anymore because that's inconvenient to a unexpericed user using the command-line, so basically no need to do (pip3 install -r requirements.txt) on this script, requirments.txt ain't there anyways 
+--Note--
+
+* you will be prompted to install the requirments you need when you start the script, I made it where if you don't have the requirments it'll install them for you when you run the rojaker.py script, so you won't have a requirments.txt anymore because that's inconvenient to a unexpericed user using the command-line, so basically no need to do (pip3 install -r requirements.txt) on this script, requirments.txt ain't there anyways 
