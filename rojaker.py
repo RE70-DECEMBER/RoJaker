@@ -60,10 +60,12 @@ else:
 def main():
     os.system("clear")
     os.system("figlet -f slant RoJaker")
-    print('------------------------')
-    print('Made By James Ryan Wood')
-    print("IP Selected: " + selected_device)
-    print('----------')
+    border = "|---------------------------|"
+    formatted_device = selected_device.center(len(border) - 16)
+    print(border)
+    print('| Made By: RE70-DECEMBER    |')
+    print("| IP Selected: {}|".format(formatted_device))
+    print(border)
     print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Exit")
     menu = input("Menu> ")
     return menu
