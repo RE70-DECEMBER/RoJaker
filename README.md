@@ -9,7 +9,8 @@ I will constantly update this script it's a work in progress and it works so far
 --RoJaker Update-- 
 
  **FEBRUARY 11TH, 2024**
-* Auto-pip-module-checker(added) 
+* Auto-pip-module-checker(added)
+* Menu Border (fixed) 
 
   **FEBRUARY 3RD, 2024**
 * Scan for roku tvs (added)
