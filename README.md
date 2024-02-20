@@ -8,6 +8,11 @@ I will constantly update this script it's a work in progress and it works so far
 
 --RoJaker Update-- 
 
+**FEBRUARY 19TH, 2024**
+* Dump Apps(added)
+* run a app (added)
+
+
  **FEBRUARY 11TH, 2024**
 * pip-module-checker(added)
 * Menu Border(fixed) 
@@ -16,6 +21,7 @@ I will constantly update this script it's a work in progress and it works so far
 * Scan for roku tvs (added)
 * Manuel ip selection (added)
 * goback to menu (added)
+
 
 
 
