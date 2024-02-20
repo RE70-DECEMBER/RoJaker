@@ -35,6 +35,9 @@ from roku import Roku
 import colorama
 from colorama import Fore, Back, Style
 import sys
+import socket
+import struct
+import time
 
 # IP Input
 os.system("clear")
@@ -66,7 +69,7 @@ def main():
     print('| Made By: RE70-DECEMBER    |')
     print("| Target: {} |".format(formatted_device))
     print(border)
-    print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Exit")
+    print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Power off or on TV\n7. Check TV Up Time\n8. Exit")
     menu = input("Menu> ")
     return menu
 
@@ -94,6 +97,19 @@ def remote_menu():
         elif rem == "9":
         	main()
 
+def get_online_time(ip_address):
+    try:
+        packed_ip = socket.inet_aton(ip_address)
+        unpacked_ip = struct.unpack("!L", packed_ip)[0]
+        current_time = int(time.time())
+        online_time_seconds = current_time - unpacked_ip
+        hours = online_time_seconds // 3600
+        minutes = (online_time_seconds % 3600) // 60
+        seconds = online_time_seconds % 60
+        return hours, minutes, seconds
+    except (socket.error, struct.error):
+        raise ValueError("Invalid IP address format.")
+
 while True:
     menu = main()
     if menu == "1":
@@ -118,5 +134,18 @@ while True:
     	test = roku[user_run]
     	test.launch()
     elif menu == "6":
-        exit()
-        break
+    	roku = Roku(selected_device)
+    	roku._post('/keypress/Power')
+    	print("[*]TV Powered Off or On")
+    	input("Press enter to return to menu")
+    elif menu == "8":
+    	exit()
+    elif menu == "7":
+    	ip_input = selected_device
+    try:
+        hours, minutes, seconds = get_online_time(ip_input)
+        print(f"TV up time status {hours} hours, {minutes} minutes, and {seconds} seconds.")
+        input("Press enter to return to menu")
+    except ValueError as e:
+        print(f"Error: {e}")
+        
