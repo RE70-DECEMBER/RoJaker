@@ -9,8 +9,10 @@ I will constantly update this script it's a work in progress and it works so far
 --RoJaker Update-- 
 
 **FEBRUARY 19TH, 2024**
-* Dump Apps(added)
-* run a app (added)
+* Dump Apps (added)
+* Run a app (added)
+* Check TV Up Time (added)
+* Power on/off TV (added)
 
 
  **FEBRUARY 11TH, 2024**
