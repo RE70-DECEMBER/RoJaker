@@ -61,10 +61,10 @@ def main():
     os.system("clear")
     os.system("figlet -f slant RoJaker")
     border = "|---------------------------|"
-    formatted_device = selected_device.center(len(border) - 16)
+    formatted_device = selected_device.center(len(border) - 12)
     print(border)
     print('| Made By: RE70-DECEMBER    |')
-    print("| IP Selected: {}|".format(formatted_device))
+    print("| Target: {} |".format(formatted_device))
     print(border)
     print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Exit")
     menu = input("Menu> ")
@@ -112,6 +112,11 @@ while True:
         input("Press enter to return to menu")
     elif menu == "4":
         remote_menu()
+    elif menu == "5":
+    	roku = Roku(selected_device)
+    	user_run = input("Enter A App ID: ")
+    	test = roku[user_run]
+    	test.launch()
     elif menu == "6":
         exit()
         break
