@@ -24,7 +24,8 @@ I will constantly update this script it's a work in progress and it works so far
 * Manuel ip selection (added)
 * goback to menu (added)
 
-
+--bugs
+*trying to return to main menu after using remote menu nothing works and script wont let you exit without pressing ctrl+c and enter
 
 
 --requirments--
