@@ -82,6 +82,70 @@ import requests
 
 
 
+def print_text_from_pastebin():
+
+    """
+
+    Function to print the text content from a given Pastebin link.
+
+
+
+    Parameters:
+
+    - pastebin_link: str
+
+        The link to the Pastebin containing the text to be printed.
+
+
+
+    Raises:
+
+    - Exception:
+
+        Raises an exception if there is an issue accessing the Pastebin link or retrieving the text content.
+
+    """
+
+
+
+    try:
+
+        # Sending a GET request to the Pastebin link to retrieve the text content
+
+        response = requests.get(pastebin_link)
+
+
+
+        # Checking if the request was successful (status code 200)
+
+        if response.status_code == 200:
+
+            # Printing the text content from the Pastebin link
+
+            print(response.text)
+
+        else:
+
+            # Handling unsuccessful request
+
+            raise Exception(f"Failed to retrieve text content. Status Code: {response.status_code}")
+
+
+
+    except Exception as e:
+
+        # Handling any exceptions that might occur during the process
+
+        print(f"An error occurred: {e}")
+
+
+
+# Example of using the function to print text from a Pastebin link
+
+pastebin_link = "https://pastebin.com/raw/ZXKCHMPG"
+
+print_text_from_pastebin()
+
 
 
 def check_for_update():
@@ -103,6 +167,8 @@ def check_for_update():
         if pastebin_number > current_script_number:
 
             print("["+Fore.RED+ "UPDATE"+Fore.WHITE+"]"+" is available!")
+
+            print_text_from_pastebin()
 
         else:
 
@@ -170,6 +236,20 @@ def main():
 
     os.system("figlet -f slant RoJaker")
 
+    print("      _______________ ")
+
+    print("     | /~~~~~~~~\ |||| ")
+
+    print("     ||  fuck    |...| ")
+
+    print("     || dem tvs  |   | ")
+
+    print("     | \________/  O | ")
+
+    print("      _______________ ")
+
+    print()
+
     border = "|---------------------------|"
 
     formatted_device = selected_device.center(len(border) - 12)
@@ -180,7 +260,7 @@ def main():
 
     print(border)
 
-    print("| Version:        3         |")
+    print("| Version:     1.03         |")
 
     print(border)
 
@@ -324,11 +404,9 @@ while True:
 
         colorama.init()
 
-        print(Fore.GREEN + roku.info)
+        print(roku.info)
 
         input("Press enter to return to menu")
-
-        print(Fore.White)
 
     elif menu == "2":
 
