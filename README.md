@@ -6,10 +6,20 @@ This is a python script that allows you to scan for roku devices on your router 
 
 **Basic setup** 
 > git clone https://github.com/RE70-DECEMBER/RoJaker.git
+>
+> 
 > cd RoJaker
+>
+> 
 > pip3 install requests
+>
+> 
 > chmod +x *
+>
+> 
 > python3 config.py
+>
+> 
 > python3 rojaker.py 
 
 
