@@ -5,9 +5,12 @@ This is a python script that allows you to scan for roku devices on your router 
 ![Screenshot](Screenshot_20240306_094039_Termux.jpg)
 
 **Basic setup** 
+
 ''
 
 cd RoJaker 
+test
+
 ''
 
 
