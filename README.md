@@ -2,7 +2,7 @@
 
 This is a python script that allows you to scan for roku devices on your router and allows you to control them 
 
-![Screenshot] (Screenshot_20240306_094039_Termux.jpg)
+![Screenshot](Screenshot_20240306_094039_Termux.jpg)
 
 --Rojaker Info--
 
