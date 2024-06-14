@@ -4,6 +4,14 @@ This is a python script that allows you to scan for roku devices on your router 
 
 ![Screenshot](Screenshot_20240306_094039_Termux.jpg)
 
+**Basic setup** 
+''
+
+cd RoJaker 
+''
+
+
+
 **Rojaker Info**
 
 I will constantly update this script it's a work in progress and it works so far except for the dump Apps and run app and the remote doesn't work right now but you can see what app is currently running on the device. update and improvements will constantly be applied so feel free to look at this github repository to see if any improvements or updates have been made 
