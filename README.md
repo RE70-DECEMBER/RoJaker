@@ -4,7 +4,16 @@ This is a python script that allows you to scan for roku devices on your router 
 
 ![Screenshot](Screenshot_20240306_094039_Termux.jpg)
 
-**Basic setup** 
+**Supported**
+*Termux (No Root) <Supported> ✅️
+*Linux <Supported> ✅️
+*Mac OS <Supported> ⁉️
+*Windows <Supported> ⁉️
+*IOS Checkra1n & pal1ra1n <Supported> ⁉️
+
+
+
+**Set up for Linux and Termux** 
 > git clone https://github.com/RE70-DECEMBER/RoJaker.git
 >
 > 
@@ -21,6 +30,9 @@ This is a python script that allows you to scan for roku devices on your router 
 >
 > 
 > python3 rojaker.py 
+
+
+
 
 
 
