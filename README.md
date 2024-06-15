@@ -6,13 +6,13 @@ This is a python script that allows you to scan for roku devices on your router 
 
 ## Supported
 
-> * Termux (No Root) ✅️
+> * Windows   ✅️
 
 > * Linux   ✅️
 
 > * Mac OS   ✅️
 
-> * Windows   ✅️
+> * Termux (No Root) ✅️
 
 > * IOS (Checkra1n & pal1ra1n)  ✅️
 
@@ -32,11 +32,7 @@ This is a python script that allows you to scan for roku devices on your router 
 
 
 
-**Rojaker Info**
-
-I will constantly update this script it's a work in progress and it works so far except for the dump Apps and run app and the remote doesn't work right now but you can see what app is currently running on the device. update and improvements will constantly be applied so feel free to look at this github repository to see if any improvements or updates have been made 
-
-**Rojaker features**
+## Rojaker features
 * Check for updates 
 * remote
 * menu color select
@@ -46,7 +42,7 @@ I will constantly update this script it's a work in progress and it works so far
 * power on or off TV
 * scan for roku tvs 
 
-**RoJaker Update**
+## RoJaker Update
 
 **MARCH 6TH, 2024**
 * Check for updates (added)
@@ -76,7 +72,7 @@ I will constantly update this script it's a work in progress and it works so far
 * Manuel ip selection (added)
 * goback to menu (added)
 
-**bugs**
+## bugs
 
 *trying to return to main menu after using remote menu nothing works and script wont let you exit without pressing ctrl+c and enter
 
@@ -85,6 +81,8 @@ I will constantly update this script it's a work in progress and it works so far
 
 *python3
 *pip3
+*colorma (should install when running script)
+*roku (should install when running script)
 
 **how to use**
 
