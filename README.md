@@ -40,7 +40,8 @@ This is a python script that allows you to scan for roku devices on your router 
 * dump Apps
 * run a app
 * power on or off TV
-* scan for roku tvs 
+* scan for roku tvs
+* Change color of menu
 
 ## RoJaker Update
 
@@ -52,7 +53,7 @@ This is a python script that allows you to scan for roku devices on your router 
 
 **FEBRUARY 28TH, 2024**
 
-*Check TV Up time (removed)
+* Check TV Up time (removed)
 
 
 
@@ -77,12 +78,13 @@ This is a python script that allows you to scan for roku devices on your router 
 *trying to return to main menu after using remote menu nothing works and script wont let you exit without pressing ctrl+c and enter
 
 
-**requirments**
+## requirments
 
-*python3
-*pip3
-*colorma (should install when running script)
-*roku (should install when running script)
+* python3 (auto linux, man termux
+* pip3 (auto linux, windows, termux man)
+* colorma (script auto download)
+* roku (script auto download)
+* figlet (comes auto on Linux, man install needed windows, termux)
 
 **how to use**
 
