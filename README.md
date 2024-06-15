@@ -1,30 +1,30 @@
-##RoJaker
+## RoJaker
 
 This is a python script that allows you to scan for roku devices on your router and allows you to control them 
 
 ![Screenshot](Screenshot_20240306_094039_Termux.jpg)
 
-##Supported
+## Supported
 
 > * Termux (No Root) ✅️
 
-> * Linux  ✅️
+> * Linux   ✅️
 
-> * Mac OS  ✅️
+> * Mac OS   ✅️
 
-> * Windows  ✅️
+> * Windows   ✅️
 
-> * IOS (Checkra1n & pal1ra1n) ✅️
+> * IOS (Checkra1n & pal1ra1n)  ✅️
 
 
 
 ##Set up for Linux and Termux
-* ' git clone https://github.com/RE70-DECEMBER/RoJaker.git '
-* ' cd RoJaker ' 
-* ' pip3 install requests '
+* 'git clone https://github.com/RE70-DECEMBER/RoJaker.git'
+* 'cd RoJaker' 
+* 'pip3 install requests'
 * ' chmod +x * '
-* ' python3 config.py '
-* ' python3 rojaker.py '
+* 'python3 config.py'
+* 'python3 rojaker.py'
 
 
 
