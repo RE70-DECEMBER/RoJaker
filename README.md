@@ -5,8 +5,9 @@ This is a python script that allows you to scan for roku devices on your router 
 ![Screenshot](Screenshot_20240306_094039_Termux.jpg)
 
 ## Supported
+* Working (✅️), Bugs but works (⚠️), Doesn't work (🚫)
 
-> * Windows   ✅️
+> * Windows ⚠️
 
 > * Linux   ✅️
 
@@ -14,7 +15,7 @@ This is a python script that allows you to scan for roku devices on your router 
 
 > * Termux (No Root) ✅️
 
-> * IOS (Checkra1n & pal1ra1n)  ✅️
+> * IOS (Checkra1n & pal1ra1n)  ⚠️
 
 
 
