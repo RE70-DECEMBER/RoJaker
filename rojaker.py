@@ -47,6 +47,7 @@ if not roku_installed or not colorama_installed:
                 pip.main(["install", "colorama"])
 
                 print("[SUCCESS] colorama installed!")
+                os.system("python3 config.py")
 
             except ImportError:
 
@@ -160,7 +161,7 @@ def check_for_update():
 
 
 
-        current_script_number = 3
+        current_script_number = 4
 
 
 
@@ -234,8 +235,6 @@ def main():
 
     os.system("clear")
 
-    os.system("figlet -f slant RoJaker")
-
     print("      _______________ ")
 
     print("     | /~~~~~~~~\ |||| ")
@@ -260,7 +259,7 @@ def main():
 
     print(border)
 
-    print("| Version:     1.03         |")
+    print("| Version:     1.04         |")
 
     print(border)
 
@@ -270,13 +269,86 @@ def main():
 
     print()
 
-    print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Power off or on TV\n7. Script Color \n8. Exit")
+    print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Power off or on TV\n7. Script Color \n8 Enable Developer Mode \n9 Volume Loop\n0. Exit")
 
     print()
 
     menu = input("(Menu) --> ")
 
     return menu
+
+#NEEDS WORK WILL DO AS SOON AS POSSIBLE
+def enable_dev():
+    print("Enabling developer Menu!")
+    roku = Roku(selected_device)
+    roku.home()
+    time.sleep(1)
+    roku.home()
+    time.sleep(1)
+    roku.home()
+    time.sleep(1)
+    roku._post('/keypress/Up')
+    time.sleep(1)
+    roku._post('/keypress/Up')
+    time.sleep(1)
+    roku._post('/keypress/Right')
+    time.sleep(1)
+    roku._post('/keypress/Left')
+    time.sleep(1)
+    roku._post('/keypress/Right')
+    time.sleep(1)
+    roku._post('/keypress/Left')
+    time.sleep(1)
+    roku._post('/keypress/Right')
+    time.sleep(1)
+    roku._post('/keypress/Left')
+    time.sleep(1)
+    roku._post('/keypress/Right')
+    print("Developed Mode enabled\nTv Will Restart")
+    print("wait 30 seconds then goto")
+    print("http://"+selected_device+":80")
+    print("Login Set To\nUsername: rokudev\npassword: abcd")
+    input("click enter to return")
+    main()
+
+
+#WORKING!!!!!!
+def dev_menu_check():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    result = sock.connect_ex((selected_device,80))
+    if result == 0:
+        print("Developer Mode Already Detected!")
+        print("Goto Browser and type to access it")
+        print("http://"+selected_device+":80")
+        print("Dont know login\nUsername: rokudev\npassword: ????")
+        input("click enter to return to menu")
+    else:
+            print("No Developer Mode Detected! ")
+            sock.close()
+            input("click enter To Enable menu")
+            enable_dev()
+
+
+def vol_up_menu():
+    roku = Roku(selected_device)
+    while True:
+        roku._post('/keypress/VolumeUp')
+
+def vol_down_menu():
+    roku = Roku(selected_device)
+    while True:
+        roku._post('/keypress/VolumeDown')
+        
+
+
+def vol_menu():
+    print("Turn The volume all the way up or down")
+    print("1.Up\n2.Down")
+    u = input("Volume > ")
+    if u == "1":
+        vol_up_menu()
+    elif u == "2":
+        vol_down_menu()
 
 
 
@@ -300,7 +372,7 @@ def remote_menu():
 
     print(border)
 
-    print("| Version:        3         |")
+    print("| Version:        4         |")
 
     print(border)
 
@@ -455,6 +527,14 @@ while True:
       os.system("python3 config.py")
 
     elif menu == "8":
+        dev_menu_check()
+    elif menu == "9":
+        vol_menu()
+
+    elif menu == "0":
 
     	exit()
+
+
+
 
