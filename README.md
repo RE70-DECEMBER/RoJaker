@@ -47,6 +47,11 @@ This is a python script that allows you to scan for roku devices on your router 
 
 ## RoJaker Update
 
+**JUNE 19TH, 2024**
+* Check for developer mode (added)
+* Enable developer mode (added)
+* Fix tv Vulunribility (added)
+
 **JUNE 18TH, 2024**
 * Check TV for developer mode (added)
 
