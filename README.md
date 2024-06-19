@@ -51,6 +51,10 @@ This is a python script that allows you to scan for roku devices on your router 
 
 * volume all the way up/down (added)
 
+* figlet banner (removed)
+
+* ascii art (added)
+
 **MARCH 6TH, 2024**
 * Check for updates (added)
 * remote (added)
