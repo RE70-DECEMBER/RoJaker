@@ -161,7 +161,7 @@ def check_for_update():
 
 
 
-        current_script_number = 4
+        current_script_number = 5
 
 
 
@@ -259,7 +259,7 @@ def main():
 
     print(border)
 
-    print("| Version:     1.04         |")
+    print("| Version:     1.05         |")
 
     print(border)
 
@@ -269,7 +269,7 @@ def main():
 
     print()
 
-    print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Power off or on TV\n7. Script Color \n8 Enable Developer Mode \n9 Volume Loop\n0. Exit")
+    print("1. Get Info\n2. See Current Running App\n3. Dump Apps\n4. Remote\n5. Run An App\n6. Power off or on TV\n7. Volume Loop\n8. Other Things\nq. Exit")
 
     print()
 
@@ -312,6 +312,116 @@ def enable_dev():
     main()
 
 
+
+def other_menu():
+    print("Here is your Options\n1.Enable Roku developer menu\n2.Check for roku developer menu\n3.Fix vulnerability\n4.Back to rojaker Menu")
+    other_menu_input = input("menu --> ")
+    if other_menu_input == "1":
+        dev_menu_check()
+    elif other_menu_input == "2":
+        dev_check_check_check()
+    elif other_menu_input == "3":
+        fix_vuln_menu()
+    elif other_menu_input == "4":
+        main()
+
+
+def fix_vuln_menu():
+    print("Warning this will fix this tv from this script working\nYou will lose connection tv will be fine tho\n1. warn tv and fix vuln\n2. dont warn tv fix vuln\n3. goback")
+    fix_menu_input = input("VULN FIXER ROKU --> ")
+    if fix_menu_input == "1":
+        fix_vuln_warn()
+    elif fix_menu_input == "2":
+        fix_vuln()
+    elif fix_menu_input == "3":
+        other_menu()
+
+def fix_vuln_warn():
+    print("Warnining user!")
+    time.sleep(3)
+    roku = Roku(selected_device)
+    roku.home()
+    time.sleep(2)
+    roku.home()
+    time.sleep(2)
+    roku.home()
+    time.sleep(2)
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku.literal('Fixing Vulnurbility')
+    time.sleep(8)
+    fix_vuln()
+
+
+def fix_vuln():
+    print("Fixing vulnuribiity\n wait until script fails!")
+    time.sleep(3)
+    while True: 
+        roku = Roku(selected_device)
+        roku.home()
+        time.sleep(1)
+        roku.home()
+        time.sleep(1)
+        roku.home()
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Right')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Right')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Right')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Right')
+        roku._post('/keypress/Right')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Down')
+        roku._post('/keypress/Select')
+        
+
+def dev_check_check_check():
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    result = sock.connect_ex((selected_device,80))
+    if result == 0:
+        print("Developer Mode Detected!")
+        input("click enter to return to menu")
+        other_menu()
+    else:
+            print("No Developer Mode Detected! ")
+            sock.close()
+            input("click enter Return To menu")
+            other_menu()
+
 #WORKING!!!!!!
 def dev_menu_check():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -322,6 +432,7 @@ def dev_menu_check():
         print("http://"+selected_device+":80")
         print("Dont know login\nUsername: rokudev\npassword: ????")
         input("click enter to return to menu")
+        main()
     else:
             print("No Developer Mode Detected! ")
             sock.close()
@@ -521,17 +632,15 @@ while True:
     	input("Press enter to return to menu")
 
     elif menu == "7": 
-
-      os.system("clear")
-
-      os.system("python3 config.py")
-
-    elif menu == "8":
-        dev_menu_check()
-    elif menu == "9":
         vol_menu()
 
-    elif menu == "0":
+    elif menu == "8":
+        other_menu()
+
+    elif menu == "c":
+        os.system("python3 config.py")
+
+    elif menu == "q":
 
     	exit()
 
