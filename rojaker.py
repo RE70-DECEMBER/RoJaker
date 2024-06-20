@@ -81,6 +81,8 @@ import time
 
 import requests
 
+import random
+
 
 
 def print_text_from_pastebin():
@@ -161,7 +163,7 @@ def check_for_update():
 
 
 
-        current_script_number = 5
+        current_script_number = 6
 
 
 
@@ -259,7 +261,7 @@ def main():
 
     print(border)
 
-    print("| Version:     1.05         |")
+    print("| Version:     1.06         |")
 
     print(border)
 
@@ -304,6 +306,15 @@ def enable_dev():
     roku._post('/keypress/Left')
     time.sleep(1)
     roku._post('/keypress/Right')
+    time.slee(1)
+    roku._post('/keypress/Left')
+    time.sleep(1)
+    roku._post('/keypress/Right')
+    time.sleep(1)
+    roku._post('/keypress/Left')
+    time.sleep(1)
+    roku._post('/keypress/Right')
+
     print("Developed Mode enabled\nTv Will Restart")
     print("wait 30 seconds then goto")
     print("http://"+selected_device+":80")
@@ -314,7 +325,7 @@ def enable_dev():
 
 
 def other_menu():
-    print("Here is your Options\n1.Enable Roku developer menu\n2.Check for roku developer menu\n3.Fix vulnerability\n4.Back to rojaker Menu")
+    print("Here is your Options\n1. Enable Roku developer menu\n2. Check for roku developer menu\n3. Fix vulnerability\n4. Fuck TV \n5. Spam Open Random Apps\n6.Back to rojaker Menu")
     other_menu_input = input("menu --> ")
     if other_menu_input == "1":
         dev_menu_check()
@@ -323,7 +334,304 @@ def other_menu():
     elif other_menu_input == "3":
         fix_vuln_menu()
     elif other_menu_input == "4":
+        fuck_tv_menu()
+    elif other_menu_input == "5":
+        spam_app()
+    elif other_menu_input == "6":
         main()
+
+
+def fuck_tv_menu():
+    print("Warning this will change a lot of tv settings to annoy user\n1. Fuck Tv\n2. UnFuck Tv\n3. GoBack")
+    fuck = input("Pick Your Fucking Option --> ")
+    if fuck == "1":
+        fuck_tv()
+    elif fuck == "2":
+        unfuck_tv()
+    elif fuck == "3":
+        other_menu()
+
+
+def unfuck_tv():
+    print("work in progress!")
+
+def fuck_tv():
+    roku = Roku(selected_device)
+    #Settings Path
+    print("Going To Tv Settings...")
+    time.sleep(2)
+    print("10%")
+    roku.home()
+    time.sleep(2)
+    print("20%")
+    roku.home()
+    time.sleep(2)
+    print("30%")
+    roku.home()
+    print("40%")
+    roku._post('/keypress/Down')
+    print("50%")
+    roku._post('/keypress/Down')
+    print("60%")
+    roku._post('/keypress/Down')
+    print("70%")
+    roku._post('/keypress/Down')
+    print("80%")
+    roku._post('/keypress/Down')
+    print("90%")
+    roku._post('/keypress/Down')
+    print("100%")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    print("Now in settings!")
+    #Accessability settings path
+    print("Going To Acessibility")
+    print("20%")
+    roku._post('/keypress/Down')
+    print("40%")
+    roku._post('/keypress/Down')
+    print("60%")
+    roku._post('/keypress/Down')
+    print("80%")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    print("100%")
+    print("Now in Acessibility Settings!")
+    #Change Captions mode in the accesability path (Command 1 done)
+    print("Changing caption settings...")
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Change captions perffered lanquage in the accessability settings (command 2 done )
+    print("Changing Caption Lanquage...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Change Caption Style Menu  In The Accessiblity Settings 
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    #Change Text style in the caption style menu in the acessibiltiy settings
+    print("Chaning Caption Style...")
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Text Edge Effecting
+    print("Changing Text Edging Effect...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Change Text Size
+    print("Changing Caption Text...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Change Text Color
+    print("Changing Caption Color...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Change caption background color
+    print("changing caption background color...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Change window color 
+    print("changing window color...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Change window capactiy
+    print("changing window capacity...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Go Back to accessability Menu
+    roku._post('/keypress/Left')
+    #Enable Screen Reader
+    print("Screen Reader Enabled...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Screen Reader speech rate
+    print("changing speech rate...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Screen reader speech tone 
+    print("changing speech tone...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Disable text to speech shortcut
+    print("Text to speech shortcut disabled...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    #Exiting accessibility menu!
+    roku._post('/keypress/Left')
+    #Changing audio lanquage
+    print("changing audio lanquage...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    roku._post('/keypress/Left')
+
+    #Going to privacy settings 
+    print("Going to privacy settings...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    #Advertising 
+    print("Restriciting Advertiments...")
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    roku._post('/keypress/Left')
+    roku._post('/keypress/Left')
+    #Exiting accessibility menu and goto system settings 
+    print("Going to system settings...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    #Changing tv Time
+    print("Changing Tv Time...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Right')
+    time.sleep(3)
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Select')
+    roku._post('/keypress/Left')
+    roku._post('/keypress/Left')
+    roku._post('/keypress/Left')
+    #Change tv lanquage
+    print("Selecting Tv Lanquage...")
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Down')
+    roku._post('/keypress/Right')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Up')
+    roku._post('/keypress/Select')
+    print("changing lanquage please wait 44 seconds\nDont Close Script!\nrokus are slow sorry")
+    time.sleep(44)
+    print("Language Changed...")
+    print("Making tv go back to home!")
+    roku.home()
+    roku.home()
+    roku.home()
+    input("!!!!lick enter continue!!!!")
+    app_spam_menu()
+
+
+def app_spam_menu():
+    print("1. Loop spam Random Apps\n2. Open 1 single app\n3. GoBack To Menu")
+    spam_input = input("FUCK TV LAST STEP --> ")
+    if spam_input == "1":
+        spam_app()
+    elif spam_input == "2":
+        open_app()
+    elif spam_input == "3":
+        other_menu()
+    
+
+def open_app():
+    roku = Roku(selected_device)  
+    apps = roku.apps
+    app_ids = [app.id for app in apps]
+    random_app_id = random.choice(app_ids)
+    test = roku[random_app_id]
+    print("Launched: "+random_app_id)
+    test.launch()
+    input("click enter to return to menu")
+    other_menu()
+
+
+
+def spam_app():
+    roku = Roku(selected_device)  
+    apps = roku.apps
+    app_ids = [app.id for app in apps]
+    print("Seconds on how fast the apps are gonna open\nRecommened: 30") 
+    num = (int(input("timeout: ")))
+    while True:
+        random_app_id = random.choice(app_ids)
+        test = roku[random_app_id]
+        time.sleep(num)
+        print("Launched: "+random_app_id)
+        test.launch()
+
+
+
+    
+
 
 
 def fix_vuln_menu():
