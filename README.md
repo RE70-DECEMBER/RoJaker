@@ -1,5 +1,7 @@
 ## RoJaker
 
+⚠️⚠️This tool was made for educational purposes only, do not use on other tvs without permission, I'm not responsible if you get into legal trouble⚠️⚠️
+
 This is a python script that allows you to scan for roku devices on your router and allows you to control them 
 
 ![Screenshot](Screenshot_20240619_093548_Termux.jpg)
