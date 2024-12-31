@@ -1,9 +1,6 @@
 # Made By Ryan
 
 
-
-# import module checker
-
 import importlib.util
 
 
@@ -61,8 +58,6 @@ if not roku_installed or not colorama_installed:
 
 
 
-# imports
-
 import os
 
 from roku import Roku
@@ -87,49 +82,21 @@ import random
 
 def print_text_from_pastebin():
 
-    """
-
-    Function to print the text content from a given Pastebin link.
-
-
-
-    Parameters:
-
-    - pastebin_link: str
-
-        The link to the Pastebin containing the text to be printed.
-
-
-
-    Raises:
-
-    - Exception:
-
-        Raises an exception if there is an issue accessing the Pastebin link or retrieving the text content.
-
-    """
-
-
 
     try:
-
-        # Sending a GET request to the Pastebin link to retrieve the text content
-
+  
         response = requests.get(pastebin_link)
-
-
-
-        # Checking if the request was successful (status code 200)
+        
 
         if response.status_code == 200:
 
-            # Printing the text content from the Pastebin link
+            
 
             print(response.text)
 
         else:
 
-            # Handling unsuccessful request
+            
 
             raise Exception(f"Failed to retrieve text content. Status Code: {response.status_code}")
 
@@ -137,13 +104,13 @@ def print_text_from_pastebin():
 
     except Exception as e:
 
-        # Handling any exceptions that might occur during the process
+       
 
         print(f"An error occurred: {e}")
 
 
 
-# Example of using the function to print text from a Pastebin link
+
 
 pastebin_link = "https://pastebin.com/raw/ZXKCHMPG"
 
