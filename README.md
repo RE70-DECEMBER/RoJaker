@@ -31,6 +31,10 @@ This is a python script that allows you to scan for roku devices on your router 
 * `python3 rojaker.py`
 
 
+## If getting errors with pip try 
+* `pip3 install roku --break-system-packages && pip3 install colorama --break-system-packages`
+
+
 
 
 
