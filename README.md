@@ -24,7 +24,8 @@ Simple Python Program That Allows For Remote Access Of Roku Devices Using Socket
 * pip: `pip3 install -r requirements.txt`
 * or
 * apt: `sudo apt install python3-requests python3-roku`
-   
+  
+## Run The Script
 * `python3 rojaker.py`
 
 ## Rojaker features 
