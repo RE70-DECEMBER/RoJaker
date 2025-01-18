@@ -1,13 +1,11 @@
 ## RoJaker
 
-⚠️⚠️This tool was made for educational purposes only, do not use on other tvs without permission, I'm not responsible if you get into legal trouble⚠️⚠️
+> [!IMPORTANT]
+> This tool was made for educational and testing purposes only
 
-This is a python script that allows you to scan for roku devices on your router and allows you to control them 
+Simple Python Program That Allows For Remote Access Of Roku Devices Using Socket
 
-![Screenshot](Screenshot_20240619_093548_Termux.jpg)
-![Screenshot](Screenshot_20240619_093604_Termux.jpg)
-
-## Supported
+## Supported (Python 3.7 to 3.11 ONLY)
 * Working (✅️), Bugs but works (⚠️), Doesn't work (🚫)
 
 > * Windows ⚠️
@@ -18,105 +16,26 @@ This is a python script that allows you to scan for roku devices on your router 
 
 > * Termux (No Root) ✅️
 
-> * IOS (Checkra1n & palera1n)  ⚠️
-
-
-
 ## Set up for Linux and Termux
-* `git clone https://github.com/RE70-DECEMBER/RoJaker.git`
-* `cd RoJaker` 
-* `pip3 install requests`
-* `pip3 install -r requirements.txt`
-* `chmod +x *`
-* `python3 config.py`
+* `git clone https://github.com/noface1200/Rojaker.git`
+* `cd ./Rojaker`
+  
+## Install Requirements 
+* pip: `pip3 install -r requirements.txt`
+* or
+* apt: `sudo apt install python3-requests python3-roku`
+  
+## Run The Script
 * `python3 rojaker.py`
 
-
-## If getting errors with pip try 
-* `pip3 install -r requirements.txt --break-system-packages`
-
-## If Still Getting Error Try 
-* `apt-get update && apt-get upgrade`
-* `pip3 install -r requirements.txt --break-system-packages`
-
-
-
-
-
-
-
-## Rojaker features
-* Check for updates 
-* remote
-* menu color select
-* module checker
-* dump Apps
-* run a app
-* power on or off TV
-* scan for roku tvs
-* Change color of menu
-
-## RoJaker Update
-
-**JUNE 19TH, 2024**
-* Check for developer mode (added)
-* Enable developer mode (added)
-* Fix tv Vulunribility (added)
-
-**JUNE 18TH, 2024**
-* Check TV for developer mode (added)
-
-* volume all the way up/down (added)
-
-* figlet banner (removed)
-
-* ascii art (added)
-
-**MARCH 6TH, 2024**
-* Check for updates (added)
-* remote (added)
-* Menu color select (added)
-
-
-**FEBRUARY 28TH, 2024**
-
-* Check TV Up time (removed)
-
-
-
-**FEBRUARY 19TH, 2024**
-* Dump Apps (added)
-* Run a app (added)
-* Check TV Up Time (added)
-* Power on/off TV (added)
-
-
- **FEBRUARY 11TH, 2024**
-* pip-module-checker(added)
-* Menu Border(fixed) 
-
-  **FEBRUARY 3RD, 2024**
-* Scan for roku tvs (added)
-* Manuel ip selection (added)
-* goback to menu (added)
-
-## bugs
-
-*trying to return to main menu after using remote menu nothing works and script wont let you exit without pressing ctrl+c and enter
-
+## Rojaker features 
+* volume control
+* annoy mode (;
+* remote mode (send keypress's)
+* roku devoloper mode
 
 ## requirments
 
-* python3 (auto linux, man termux
-* pip3 (auto linux, windows, termux man)
-* colorma (script auto download)
-* roku (script auto download)
-* figlet (comes auto on Linux, man install needed windows, termux)
-
-**how to use**
-
-python3 rojaker.py
-
-**Note**
-
-* you will be prompted to install the requirments you need when you start the script, I made it where if you don't have the requirments it'll install them for you when you run the rojaker.py script, so you won't have a requirments.txt anymore because that's inconvenient to a unexpericed user using the command-line, so basically no need to do (pip3 install -r requirements.txt) on this script, requirments.txt ain't there anyways 
+* Python 3.7 to 3.11
+* pip3 or apt
+* https://github.com/jcarbaugh/python-roku

@@ -1,2 +1,2 @@
 roku
-colorama
+requests
